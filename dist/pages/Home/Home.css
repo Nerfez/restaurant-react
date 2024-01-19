@@ -1,0 +1,10 @@
+.custom-image {
+  max-height: 700px;
+  margin: 0 auto;
+}
+
+.custom-carousel-container {
+  margin-top: 20px !important;
+  max-width: 1300px;
+  margin: 0 auto;
+}
