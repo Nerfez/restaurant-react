@@ -16,6 +16,7 @@ const Login = () => {
       await signUp(email, password);
       navigate("/home");
     } catch (error) {
+      alert("La connexion à échouée, verifiez vos identifiants de connexion");
       console.error("Création échouée", error.message);
     }
   };
@@ -31,6 +32,7 @@ const Login = () => {
         await signIn(email, password);
         navigate("/home");
       } catch (error) {
+        alert("La connexion à échouée, verifiez vos identifiants de connexion");
         console.error("Connexion échouée", error.message);
       }
     } else {
