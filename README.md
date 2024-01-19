@@ -36,3 +36,15 @@ Toutes les fonctionnalités demandées ont été respectées sauf  le footer car
 1. Ainsi je pense revoir la qualité de mon code pour les prochains jours. A savoir respecter les indentations, camelCase sur les variables et également beaucoup d'externalisation de code car certains fichiers font 300 lignes.
 2. Héberger les données sur une vraie base de donnée
 3. Améliorer le visuel, css
+4. Gérer mieux les erreurs si pas d'accès connexion à la base de donnée
+
+### Notes pour moi même
+
+Commandes pour actualiser mes fichiers et les publier sur firebase :
+```
+npm run build
+```
+
+```
+firebase deploy --only hosting
+```
