@@ -41,31 +41,35 @@ function Home() {
   return (
     <>
       <Header></Header>
-      <div>
-        <div className="custom-carousel-container">
-          <Carousel activeIndex={activeIndex} onSelect={handleSelect}>
-            {top5Recipes.map((recipe) => (
-              <Carousel.Item key={recipe.id}>
-                <img
-                  className="d-block w-100 custom-image"
-                  src={recipe.image}
-                  alt={`Slide ${recipe.id}`}
-                />
-                <Carousel.Caption>
-                  <h3>{recipe.name}</h3>
-                  <p>{recipe.instructions[0]}</p>
-                </Carousel.Caption>
-              </Carousel.Item>
-            ))}
-          </Carousel>
-        </div>
+      {top5Recipes.length > 0 ? (
+        <div>
+          <div className="custom-carousel-container">
+            <Carousel activeIndex={activeIndex} onSelect={handleSelect}>
+              {top5Recipes.map((recipe) => (
+                <Carousel.Item key={recipe.id}>
+                  <img
+                    className="d-block w-100 custom-image"
+                    src={recipe.image}
+                    alt={`Slide ${recipe.id}`}
+                  />
+                  <Carousel.Caption>
+                    <h3>{recipe.name}</h3>
+                    <p>{recipe.instructions[0]}</p>
+                  </Carousel.Caption>
+                </Carousel.Item>
+              ))}
+            </Carousel>
+          </div>
 
-        <Container className="d-flex justify-content-center mt-4">
-          <Button variant="primary" size="lg" onClick={handleCommanderClick}>
-            Commander maintenant
-          </Button>
-        </Container>
-      </div>
+          <Container className="d-flex justify-content-center mt-4">
+            <Button variant="primary" size="lg" onClick={handleCommanderClick}>
+              Commander maintenant
+            </Button>
+          </Container>
+        </div>
+      ) : (
+        <h1>Aucune donnée retrouvée</h1>
+      )}
       <Footer></Footer>
     </>
   );
